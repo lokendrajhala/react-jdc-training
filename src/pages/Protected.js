@@ -1,11 +1,14 @@
 import React from 'react';
 
 export default props => {
-  const { logout } = props;
+  const { actions, profile } = props;
   return (
     <div>
       <p className="App-intro">
-        <button onClick={logout}>Logout</button>
+        <div>
+          {profile.firstName}
+        </div>
+        <button onClick={actions.logout}>Logout</button>
       </p>
     </div>
   );
